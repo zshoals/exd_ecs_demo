@@ -126,7 +126,7 @@ void empty_health_kill_system(exd_world_t * world);
 	exd_query_init_fast(&q, default_frame_allocator());
 	{
 		//Include entities with health,
-		//but exclude any entities with health that also have a god mode state (aka invulnerable)
+		//but exclude any entities with a god mode state (aka invulnerable)
 
 		exd_query_include(&q, COMP_HEALTH);
 
