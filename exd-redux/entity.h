@@ -10,7 +10,6 @@ typedef u64 exd_entity_t;
 
 #define EXD_ID_SHIFT 13
 #define EXD_ID_BITS (1 << EXD_ID_SHIFT)
-#define EXD_GENERATION_BITS (64 - EXD_ID_BITS)
 
 #define EXD_ID_MASK (EXD_ID_BITS - 1)
 
