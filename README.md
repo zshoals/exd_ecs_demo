@@ -43,6 +43,7 @@ exd_world_init(world, default_permanent_allocator());
 
 exd_world_set_global_world_for_shorthand_access(world);
 
+//Note: Struct typedefs (position_t, health_t, etc.) omitted for brevity
 exd_world_component_create_component_storage(world, position_t, COMP_POSITION);
 exd_world_component_create_component_storage(world, rotation_t, COMP_ROTATION);
 exd_world_component_create_component_storage(world, health_t, COMP_HEALTH);
