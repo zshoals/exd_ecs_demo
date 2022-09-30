@@ -142,6 +142,20 @@ void empty_health_kill_system(exd_world_t * world);
 		}
 	}
 }
-
-//That's all! Thanks for reading!
 ```
+
+File breakdown:
+
+* **exd-common.h**: Frequently used macros, typedefs, etc.
+* **exd-math.h**: Power of 2 division and modulo
+* **exd-config.h**: Configuration Defines intended to be changed by the user
+* **exd-unit.c**: Manual unity build
+* **bit.h**: Bitwise operations
+* **entity.h**: Unique unsigned 64 bit integer Version/Handle combo
+* **iterable_entity.h**: Special-cased entity that can skip some otherwise mandatory validation checks during query iteration
+* **entset.h**: Bitsets accessed via entity handles
+* **freelist.h**: Hands out unused entity IDs to the user, with some special cased design
+* **entity_list.h**: "Master list" of entities, containing entity active/inactive states, all entity IDs and their current version/generation, and maintains an entity freelist
+* **component_data.h**: Untyped component/data array storage, also doubles as "tag" storage (bitset-only components, no additional data)
+* **world_query.h**: Bitset merging operations that generate an iterable list of entities matching a component search query
+* **world.h**: Primary user interface, general storage and synchronization container for everything else
